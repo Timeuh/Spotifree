@@ -1,0 +1,11 @@
+{
+  "name": "timeuh/spotifree",
+  "description": "spotifree music streaming website",
+  "type": "project",
+
+  "autoload": {
+    "psr-4": {
+      "timeuh\\spotifree\\": "src/classes/"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "spotifree",
+  "version": "1.0.0",
+  "description": "a music streaming website",
+  "main": "Index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Timeuh",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
