@@ -11,5 +11,13 @@
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.2.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Timeuh/Spotifree.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Timeuh/Spotifree/issues"
+  },
+  "homepage": "https://github.com/Timeuh/Spotifree#readme"
 }

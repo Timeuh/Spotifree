@@ -9,7 +9,7 @@
 <body class="flex flex-col items-center">
     <header class="flex flex-row items-center">
         <img src="icon.png" alt="icone du site">
-        <h1>Bienvenue sur Spotifree</h1>
+        <h1 class="text-6xl text-red-800">Bienvenue sur Spotifree</h1>
     </header>
     <main>
         <h2>Ceci est le contenu</h2>
