@@ -11,11 +11,13 @@
         <img src="icon.png" alt="icone du site">
         <h1 class="text-6xl text-red-800">Bienvenue sur Spotifree</h1>
     </header>
-    <main>
-        <h2>Ceci est le contenu</h2>
-    </main>
-    <footer>
-        <h3>Site créé par Timeuh</h3>
+    <div id="mainContainer" class="h-screen">
+        <main class="flex flex-col h-5/6 justify-center">
+            <h2 class="text-4xl">Ceci est le contenu</h2>
+        </main>
+    </div>
+    <footer class="absolute bottom-0 h-12 text-center">
+        <h3 class="text-2xl">Site créé par Timeuh</h3>
     </footer>
 </body>
 </html>
