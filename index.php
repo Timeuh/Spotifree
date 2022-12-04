@@ -16,10 +16,10 @@
         <div class="flex flex-col text-lemonMeringue text-center bg-prussianBlue space-y-8 h-4/6 justify-center items-center border-lemonMeringue
             border-double border-4 rounded-md font-bold">
             <h2 class="text-4xl">Pas encore de compte ?</h2>
-            <a href="index.php?action=register" class="border-2 border-orange rounded-md w-3/6 hover:text-lemonMeringue hover:bg-maximumRed
+            <a href="src/pages/register.php" class="border-2 border-orange rounded-md w-3/6 hover:text-lemonMeringue hover:bg-maximumRed
             bg-lemonMeringue text-maximumRed text-2xl">S'inscrire</a>
             <h2 class="text-4xl">Déjà un compte ?</h2>
-            <a href="index.php?action=login" class="border-2 border-orange rounded-md w-3/6 hover:text-lemonMeringue hover:bg-maximumRed
+            <a href="src/pages/login.php" class="border-2 border-orange rounded-md w-3/6 hover:text-lemonMeringue hover:bg-maximumRed
             bg-lemonMeringue text-maximumRed text-2xl">Se connecter</a>
         </div>
     </main>
