@@ -4,7 +4,7 @@
   <title>Spotifree</title>
   <meta charset="UTF-8">
   <link rel="icon" href="iconPalette.png">
-  <link rel="stylesheet" href="src/styles/main.css">
+  <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body>
     <h1>Inscription</h1>
