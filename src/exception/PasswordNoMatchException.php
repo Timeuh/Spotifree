@@ -8,7 +8,7 @@ class PasswordNoMatchException extends \Exception {
 
     #[NoReturn] public function __construct() {
         parent::__construct();
-        header("GET: ../pages/register.php?error=passwordDiff");
+        header("Location: ../pages/register.php?error=passwordDiff");
         exit();
     }
 }
