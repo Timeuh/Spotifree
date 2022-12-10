@@ -513,8 +513,65 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.static {
+  position: static;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
 .bottom-0 {
   bottom: 0px;
+}
+
+.bottom-2 {
+  bottom: 0.5rem;
+}
+
+.top-2 {
+  top: 0.5rem;
+}
+
+.top-10 {
+  top: 2.5rem;
+}
+
+.bottom-10 {
+  bottom: 2.5rem;
+}
+
+.top-4 {
+  top: 1rem;
+}
+
+.bottom-4 {
+  bottom: 1rem;
+}
+
+.left-2 {
+  left: 0.5rem;
+}
+
+.m-0 {
+  margin: 0px;
+}
+
+.m-10 {
+  margin: 2.5rem;
+}
+
+.mx-12 {
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 .flex {
@@ -541,12 +598,36 @@ video {
   height: 3rem;
 }
 
+.h-5\/6 {
+  height: 83.333333%;
+}
+
 .w-screen {
   width: 100vw;
 }
 
 .w-3\/6 {
   width: 50%;
+}
+
+.w-1\/6 {
+  width: 16.666667%;
+}
+
+.w-2\/6 {
+  width: 33.333333%;
+}
+
+.w-4\/6 {
+  width: 66.666667%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-5\/6 {
+  width: 83.333333%;
 }
 
 .flex-row {
@@ -561,12 +642,32 @@ video {
   flex-wrap: wrap;
 }
 
+.content-center {
+  align-content: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
 .items-center {
   align-items: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .space-y-8 > :not([hidden]) ~ :not([hidden]) {
@@ -579,6 +680,34 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-20 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(5rem * var(--tw-space-y-reverse));
+}
+
+.-space-y-14 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(-3.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(-3.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-14 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(3.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(3.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-12 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(3rem * var(--tw-space-y-reverse));
+}
+
+.self-center {
+  align-self: center;
 }
 
 .rounded-md {
@@ -625,6 +754,16 @@ video {
   border-color: rgb(247 127 0 / var(--tw-border-opacity));
 }
 
+.border-maximumRed {
+  --tw-border-opacity: 1;
+  border-color: rgb(214 40 40 / var(--tw-border-opacity));
+}
+
+.border-red-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(248 113 113 / var(--tw-border-opacity));
+}
+
 .bg-prussianBlue {
   --tw-bg-opacity: 1;
   background-color: rgb(0 48 73 / var(--tw-bg-opacity));
@@ -654,6 +793,38 @@ video {
   --tw-gradient-to: #EAE2B7;
 }
 
+.py-14 {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.pt-40 {
+  padding-top: 10rem;
+}
+
+.pt-24 {
+  padding-top: 6rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -673,6 +844,16 @@ video {
   line-height: 2rem;
 }
 
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -685,6 +866,26 @@ video {
 .text-maximumRed {
   --tw-text-opacity: 1;
   color: rgb(214 40 40 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-4xl::-moz-placeholder {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.placeholder\:text-4xl::placeholder {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.placeholder\:text-lemonMeringue::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(234 226 183 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-lemonMeringue::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(234 226 183 / var(--tw-text-opacity));
 }
 
 .hover\:bg-maximumRed:hover {
