@@ -16,7 +16,7 @@ class ComposerStaticInitc5bc3b09541463a8d085876bc87084af
     public static $prefixDirsPsr4 = array (
         'timeuh\\spotifree\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/classes',
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

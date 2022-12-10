@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'timeuh\\spotifree\\' => array($baseDir . '/src/classes'),
+    'timeuh\\spotifree\\' => array($baseDir . '/src'),
 );
