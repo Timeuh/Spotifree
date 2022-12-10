@@ -49,4 +49,21 @@ class Auth {
         }
         return true;
     }
+
+    public static function login(string $email, string $password) : void {
+        $filteredMail = filter_var($email, FILTER_SANITIZE_EMAIL);
+
+        if (($db = DBConnect::makeConnection()) != null){
+            $query = $db->prepare("select password from user where email = :email");
+            $query->bindParam(':email', $filteredMail);
+            $query->execute();
+
+            $data = $query->fetch();
+            $pass = $data['password'];
+
+            if (password_verify($password, $pass)){
+                $_SESSION['user'] = 'user';
+            }
+        }
+    }
 }
