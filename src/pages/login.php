@@ -1,3 +1,17 @@
+<?php
+
+use timeuh\spotifree\auth\Auth;
+
+require_once "../../vendor/autoload.php";
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $email = $_POST['email'] ?? null;
+    $password = $_POST['password'] ?? null;
+
+    Auth::login($email, $password);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,10 +22,11 @@
 </head>
 <body>
     <?php
-    if (isset($_GET['state'])){
+    if (isset($_GET['state'])) {
         $state = $_GET['state'];
         if ($state == "registered") : ?> <h1>Inscription réussie</h1><br>
-        <?php endif; } ?>
+        <?php endif;
+    } ?>
     <h1>Connexion</h1>
     <form method="post" action="login.php">
         <label>Email
