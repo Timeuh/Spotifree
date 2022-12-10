@@ -1,12 +1,13 @@
 <?php
 namespace timeuh\spotifree\pages;
 
-use timeuh\spotifree\auth\Auth;
-
 require_once "../../vendor/autoload.php";
+use timeuh\spotifree\auth\Auth;
+use timeuh\spotifree\database\DBConnect;
 
-$request = $_SERVER['REQUEST_METHOD'];
-if ($request == "POST"){
+DBConnect::init("../../dbconfig.ini");
+
+if ($_SERVER['REQUEST_METHOD'] == "POST"){
     $email = $_POST['email'] ?? null;
     $password = $_POST['password'] ?? null;
     $repeat = $_POST['repeat'] ?? null;
@@ -20,7 +21,7 @@ if ($request == "POST"){
 <head>
   <title>Spotifree</title>
   <meta charset="UTF-8">
-  <link rel="icon" href="iconPalette.png">
+  <link rel="icon" href="../../iconPalette.png">
   <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body>
