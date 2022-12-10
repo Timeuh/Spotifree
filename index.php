@@ -22,5 +22,6 @@
     <footer class="flex flex-row space-x-2 bottom-0 h-12 text-center bg-prussianBlue w-screen justify-center items-center border-lemonMeringue border-t-2 rounded-t-md">
         <h3 class="text-2xl text-lemonMeringue">Site créé par</h3>
         <a href="https://github.com/Timeuh" class="text-2xl text-lemonMeringue hover:text-maximumRed font-bold">Timeuh</a>
+    </footer>
 </body>
 </html>
