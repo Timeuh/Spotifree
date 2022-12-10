@@ -1,12 +1,15 @@
 <?php
 
-namespace auth;
+namespace timeuh\spotifree\auth;
+
+use timeuh\spotifree\exception\PasswordNoMatchException;
+use timeuh\spotifree\exception\PasswordNotStrongException;
 
 class Auth {
 
     public static function register(string $email, string $password, string $repeat) : bool{
-        if ($password != $repeat) return false;
-        if (!self::check_password_strength($password, 8)) return false;
+        if ($password != $repeat) throw new PasswordNoMatchException();
+        if (!self::check_password_strength($password, 8)) throw new PasswordNotStrongException();
         return true;
     }
 
