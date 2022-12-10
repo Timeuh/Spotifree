@@ -54,15 +54,18 @@ class Auth {
         $filteredMail = filter_var($email, FILTER_SANITIZE_EMAIL);
 
         if (($db = DBConnect::makeConnection()) != null){
-            $query = $db->prepare("select password from user where email = :email");
+            $query = $db->prepare("select password, role from user where email = :email");
             $query->bindParam(':email', $filteredMail);
             $query->execute();
 
             $data = $query->fetch();
             $pass = $data['password'];
+            $role = $data['role'];
 
             if (password_verify($password, $pass)){
-                $_SESSION['user'] = 'user';
+                $user = new User($role, $email);
+                $_SESSION['user'] = serialize($user);
+                header("Location: ../pages/home.php");
             }
         }
     }
