@@ -1,6 +1,6 @@
 <?php
 
-namespace exception;
+namespace timeuh\spotifree\exception;
 
 use JetBrains\PhpStorm\NoReturn;
 
