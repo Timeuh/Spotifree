@@ -3,7 +3,7 @@
         'name' => 'timeuh/spotifree',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'b57b0fa8462402185fb0ff9d49d1ea47313eb9a7',
+        'reference' => '883c0193ec0c6bac834a87d852b714e3a3a220ec',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'timeuh/spotifree' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'b57b0fa8462402185fb0ff9d49d1ea47313eb9a7',
+            'reference' => '883c0193ec0c6bac834a87d852b714e3a3a220ec',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
