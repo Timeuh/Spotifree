@@ -7,7 +7,7 @@ class DBConnect {
     private static ?array $config = null;
 
     public static function init(string $file) : void {
-        self::$config = parse_ini_file($file);
+        if (self::$config == null) self::$config = parse_ini_file($file);
     }
 
     public static function makeConnection() : \PDO{
