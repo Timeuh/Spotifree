@@ -9,7 +9,7 @@
 <body>
     <?php
     if (isset($_GET['state'])){
-        $state = $_GET['error'];
+        $state = $_GET['state'];
         if ($state == "registered") : ?> <h1>Inscription réussie</h1><br>
         <?php endif; } ?>
     <h1>Connexion</h1>
