@@ -32,6 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
             $error = $_GET['error'];
             if ($error == "passwordDiff") : ?> <h1 class="text-4xl text-maximumRed border-2 border-maximumRed rounded-md">Erreur : vos mots de passe doivent correspondre</h1>
             <?php elseif ($error == "passwordForce") : ?> <h1 class="text-4xl text-maximumRed border-2 border-maximumRed rounded-md">Erreur : votre mot de passe est trop faible</h1>
+            <?php elseif ($error == "alreadyExist") : ?> <h1 class="text-4xl text-maximumRed border-2 border-maximumRed rounded-md">Erreur : votre compte existe déjà, veuillez vous connecter</h1>
             <?php endif; } ?>
         <form method="post" action="register.php" class="flex flex-col h-4/6 justify-center space-y-12 w-4/6 text-2xl">
             <label class="flex justify-between flex-wrap">Email
