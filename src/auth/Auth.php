@@ -3,6 +3,7 @@
 namespace timeuh\spotifree\auth;
 
 use timeuh\spotifree\database\DBConnect;
+use timeuh\spotifree\exception\AlreadyRegisteredException;
 use timeuh\spotifree\exception\PasswordNoMatchException;
 use timeuh\spotifree\exception\PasswordNotStrongException;
 
@@ -13,8 +14,9 @@ class Auth {
     public static function register(string $email, string $password, string $repeat) : void{
         if ($password != $repeat) throw new PasswordNoMatchException();
         if (!self::check_password_strength($password, 8)) throw new PasswordNotStrongException();
+        if (self::check_user_registered($email)) throw new AlreadyRegisteredException();
 
-        if (!self::check_user_registered($email)){
+        else {
             if (($db = DBConnect::makeConnection()) != null){
                 $filteredMail = filter_var($email, FILTER_SANITIZE_EMAIL);
                 $hashedPass = password_hash($password, PASSWORD_DEFAULT, ['cost'=>12]);
