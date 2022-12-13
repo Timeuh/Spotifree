@@ -4,8 +4,10 @@ namespace timeuh\spotifree\auth;
 
 use timeuh\spotifree\database\DBConnect;
 use timeuh\spotifree\exception\AlreadyRegisteredException;
+use timeuh\spotifree\exception\NoUserException;
 use timeuh\spotifree\exception\PasswordNoMatchException;
 use timeuh\spotifree\exception\PasswordNotStrongException;
+use timeuh\spotifree\exception\PasswordWrongException;
 
 DBConnect::init("../../dbconfig.ini");
 
@@ -60,14 +62,17 @@ class Auth {
             $query->bindParam(':email', $filteredMail);
             $query->execute();
 
-            $data = $query->fetch();
-            $pass = $data['password'];
-            $role = $data['role'];
+            if (!$data = $query->fetch()) throw new NoUserException();
+            else {
+                $pass = $data['password'];
+                $role = $data['role'];
 
-            if (password_verify($password, $pass)){
-                $user = new User($role, $email);
-                $_SESSION['user'] = serialize($user);
-                header("Location: ../pages/home.php");
+                if (!password_verify($password, $pass)) throw new PasswordWrongException();
+                else {
+                    $user = new User($role, $email);
+                    $_SESSION['user'] = serialize($user);
+                    header("Location: ../pages/home.php");
+                }
             }
         }
     }
