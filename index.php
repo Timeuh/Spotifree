@@ -13,6 +13,16 @@
     </header>
     <main class="flex flex-col h-full w-3/6 justify-center">
         <div class="flex flex-col text-lemonMeringue text-center bg-prussianBlue space-y-8 h-4/6 justify-center items-center border-lemonMeringue border-double border-4 rounded-md font-bold">
+            <?php
+            session_start();
+            if($_SERVER['REQUEST_METHOD'] == "GET"){
+                if (isset($_GET['state'])){
+                    if ($_GET['state'] == "disconnect") : ?><h1 class="text-3xl text-maximumRed">Déconnexion réussie</h1>
+            <?php
+                        session_destroy();
+                    endif;
+                    }
+                } ?>
             <h2 class="text-4xl">Pas encore de compte ?</h2>
             <a href="src/pages/register.php" class="border-2 border-orange rounded-md w-3/6 hover:text-lemonMeringue hover:bg-maximumRed bg-lemonMeringue text-maximumRed text-2xl">S'inscrire</a>
             <h2 class="text-4xl">Déjà un compte ?</h2>
