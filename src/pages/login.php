@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body class="flex flex-col items-center justify-center h-screen w-screen bg-gradient-to-r from-maximumRed via-maximumYellowRed to-lemonMeringue">
-    <div class="flex flex-col h-5/6 w-3/6 bg-prussianBlue text-lemonMeringue border-4 border-double rounded-md border-lemonMeringue items-center justify-center relative">
+    <main class="flex flex-col h-5/6 w-3/6 bg-prussianBlue text-lemonMeringue border-4 border-double rounded-md border-lemonMeringue items-center justify-center relative">
         <?php
         if (isset($_GET['state'])) {
             $state = $_GET['state'];
@@ -46,6 +46,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             </div>
         </form>
         <a href="../../index.php" class="flex border-2 border-orange rounded-md w-1/6 text-2xl text-maximumRed hover:text-lemonMeringue hover:bg-maximumRed bg-lemonMeringue absolute bottom-2 font-bold justify-center">Accueil</a>
-    </div>
+    </main>
+    <footer class="absolute bottom-0 flex flex-row space-x-2 bottom-0 h-12 text-center bg-prussianBlue w-screen justify-center items-center border-lemonMeringue border-t-2 rounded-t-md">
+        <h3 class="text-2xl text-lemonMeringue">Site créé par</h3>
+        <a href="https://github.com/Timeuh" class="text-2xl text-lemonMeringue hover:text-maximumRed font-bold">Timeuh</a>
+    </footer>
 </body>
 </html>
