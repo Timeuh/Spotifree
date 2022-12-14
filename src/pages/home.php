@@ -8,6 +8,6 @@
 </head>
 <body>
     <h1>Vous êtes connecté</h1>
-    <a href="../../index.php">Accueil</a>
+    <a href="../../index.php?state=disconnect">Déconnexion</a>
 </body>
 </html>
