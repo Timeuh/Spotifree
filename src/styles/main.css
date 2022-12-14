@@ -585,6 +585,18 @@ video {
   width: 16.666667%;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -597,6 +609,10 @@ video {
   flex-wrap: wrap;
 }
 
+.content-center {
+  align-content: center;
+}
+
 .items-center {
   align-items: center;
 }
@@ -607,6 +623,10 @@ video {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .space-y-8 > :not([hidden]) ~ :not([hidden]) {
@@ -657,6 +677,10 @@ video {
   border-top-width: 2px;
 }
 
+.border-r-2 {
+  border-right-width: 2px;
+}
+
 .border-double {
   border-style: double;
 }
@@ -696,6 +720,12 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-prussianBlue {
+  --tw-gradient-from: #003049;
+  --tw-gradient-to: rgb(0 48 73 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .via-maximumYellowRed {
   --tw-gradient-to: rgb(252 191 73 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), #FCBF49, var(--tw-gradient-to);
@@ -703,6 +733,14 @@ video {
 
 .to-lemonMeringue {
   --tw-gradient-to: #EAE2B7;
+}
+
+.to-gray-800 {
+  --tw-gradient-to: #1f2937;
+}
+
+.to-orange {
+  --tw-gradient-to: #F77F00;
 }
 
 .text-center {
@@ -729,6 +767,11 @@ video {
   line-height: 2rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -741,6 +784,34 @@ video {
 .text-maximumRed {
   --tw-text-opacity: 1;
   color: rgb(214 40 40 / var(--tw-text-opacity));
+}
+
+.after\:ml-0\.5::after {
+  content: var(--tw-content);
+  margin-left: 0.125rem;
+}
+
+.after\:ml-0::after {
+  content: var(--tw-content);
+  margin-left: 0px;
+}
+
+.after\:space-x-4 > :not([hidden]) ~ :not([hidden])::after {
+  content: var(--tw-content);
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.after\:border-lemonMeringue::after {
+  content: var(--tw-content);
+  --tw-border-opacity: 1;
+  border-color: rgb(234 226 183 / var(--tw-border-opacity));
+}
+
+.after\:content-\[\'\|\'\]::after {
+  --tw-content: '|';
+  content: var(--tw-content);
 }
 
 .hover\:bg-maximumRed:hover {
