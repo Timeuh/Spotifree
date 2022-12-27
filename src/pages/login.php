@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 use timeuh\spotifree\auth\Auth;
 
 require_once "../../vendor/autoload.php";
