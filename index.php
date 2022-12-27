@@ -17,7 +17,7 @@
             session_start();
             if($_SERVER['REQUEST_METHOD'] == "GET"){
                 if (isset($_GET['state'])){
-                    if ($_GET['state'] == "disconnect") : ?><h1 class="text-3xl text-maximumRed">Déconnexion réussie</h1>
+                    if ($_GET['state'] == "disconnect") : ?><h1 class="text-3xl text-green-600">Déconnexion réussie</h1>
             <?php
                         session_destroy();
                     endif;

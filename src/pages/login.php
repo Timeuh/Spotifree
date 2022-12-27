@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <?php
         if (isset($_GET['state'])) {
             $state = $_GET['state'];
-            if ($state == "registered") : ?> <h1 class="text-4xl text-maximumRed border-2 border-maximumRed rounded-md">Inscription réussie</h1>
+            if ($state == "registered") : ?> <h1 class="text-4xl text-green-600 border-2 border-green-600 rounded-md">Inscription réussie</h1>
             <?php endif;
         } ?>
         <?php if (isset($_GET['error'])){
