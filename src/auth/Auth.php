@@ -22,11 +22,20 @@ class Auth {
             if (($db = DBConnect::makeConnection()) != null){
                 $filteredMail = filter_var($email, FILTER_SANITIZE_EMAIL);
                 $hashedPass = password_hash($password, PASSWORD_DEFAULT, ['cost'=>12]);
+                $infos = ["John", "Doe", 18, "Classique"];
 
                 $insert = $db->prepare("insert into user(email,password) values (:email, :password)");
                 $insert->bindParam(':email', $filteredMail);
                 $insert->bindParam(':password', $hashedPass);
                 $insert->execute();
+
+                $profile = $db->prepare("insert into profile(email, name, surname, age, pref_style) values(:email, :name, :surname, :age, :style)");
+                $profile->bindParam(':email', $filteredMail);
+                $profile->bindParam(':name', $infos[0]);
+                $profile->bindParam(':surname', $infos[1]);
+                $profile->bindParam(':age', $infos[2]);
+                $profile->bindParam(':style', $infos[3]);
+                $profile->execute();
 
                 header("Location: ../pages/login.php?state=registered");
             }
