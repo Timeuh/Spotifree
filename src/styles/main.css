@@ -503,14 +503,119 @@ video {
   --tw-sepia:  ;
   --tw-drop-shadow:  ;
   --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
+  --tw-backdrop-brightness: ;
+  --tw-backdrop-contrast: ;
+  --tw-backdrop-grayscale: ;
+  --tw-backdrop-hue-rotate: ;
+  --tw-backdrop-invert: ;
+  --tw-backdrop-opacity: ;
+  --tw-backdrop-saturate: ;
+  --tw-backdrop-sepia: ;
+}
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.button-default {
+  margin: 1rem;
+  width: 40%;
+  border-radius: 0.375rem;
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  --tw-gradient-from: #D62828;
+  --tw-gradient-to: rgb(214 40 40 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: rgb(252 191 73 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #FCBF49, var(--tw-gradient-to);
+  --tw-gradient-to: #EAE2B7;
+  padding: 0.125rem;
+}
+
+.button-content {
+  display: block;
+  border-radius: 0.375rem;
+  background-color: rgb(0 48 73 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.4;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.button-content:hover {
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: rgb(0 48 73 / var(--tw-text-opacity));
+}
+
+.background-plate {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 48 73 / var(--tw-border-opacity));
+  background-color: rgb(0 48 73 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.2;
+  font-weight: 700;
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  --tw-backdrop-blur: blur(16px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.form-content {
+  display: block;
+  border-radius: 0.375rem;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 48 73 / var(--tw-border-opacity));
+  background-color: rgb(0 48 73 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.4;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.form-content::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(234 226 183 / var(--tw-text-opacity));
+}
+
+.form-content::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(234 226 183 / var(--tw-text-opacity));
 }
 
 .static {
@@ -535,6 +640,10 @@ video {
 
 .bottom-2 {
   bottom: 0.5rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
 }
 
 .flex {
@@ -645,12 +754,12 @@ video {
   border-top-right-radius: 0.375rem;
 }
 
-.border-4 {
-  border-width: 4px;
-}
-
 .border-2 {
   border-width: 2px;
+}
+
+.border-4 {
+  border-width: 4px;
 }
 
 .border-b-2 {
@@ -674,9 +783,9 @@ video {
   border-color: rgb(234 226 183 / var(--tw-border-opacity));
 }
 
-.border-orange {
+.border-green-600 {
   --tw-border-opacity: 1;
-  border-color: rgb(247 127 0 / var(--tw-border-opacity));
+  border-color: rgb(22 163 74 / var(--tw-border-opacity));
 }
 
 .border-maximumRed {
@@ -684,9 +793,14 @@ video {
   border-color: rgb(214 40 40 / var(--tw-border-opacity));
 }
 
-.border-green-600 {
+.border-orange {
   --tw-border-opacity: 1;
-  border-color: rgb(22 163 74 / var(--tw-border-opacity));
+  border-color: rgb(247 127 0 / var(--tw-border-opacity));
+}
+
+.border-prussianBlue {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 48 73 / var(--tw-border-opacity));
 }
 
 .bg-prussianBlue {
@@ -697,6 +811,10 @@ video {
 .bg-lemonMeringue {
   --tw-bg-opacity: 1;
   background-color: rgb(234 226 183 / var(--tw-bg-opacity));
+}
+
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
 
 .bg-gradient-to-r {
@@ -720,6 +838,10 @@ video {
 
 .to-orange {
   --tw-gradient-to: #F77F00;
+}
+
+.pt-12 {
+  padding-top: 3rem;
 }
 
 .text-center {
@@ -760,14 +882,19 @@ video {
   color: rgb(234 226 183 / var(--tw-text-opacity));
 }
 
+.text-green-600 {
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
+}
+
 .text-maximumRed {
   --tw-text-opacity: 1;
   color: rgb(214 40 40 / var(--tw-text-opacity));
 }
 
-.text-green-600 {
+.text-prussianBlue {
   --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity));
+  color: rgb(0 48 73 / var(--tw-text-opacity));
 }
 
 .hover\:bg-maximumRed:hover {
@@ -775,12 +902,17 @@ video {
   background-color: rgb(214 40 40 / var(--tw-bg-opacity));
 }
 
-.hover\:text-lemonMeringue:hover {
+.hover\:text-prussianBlue:hover {
   --tw-text-opacity: 1;
-  color: rgb(234 226 183 / var(--tw-text-opacity));
+  color: rgb(0 48 73 / var(--tw-text-opacity));
 }
 
 .hover\:text-maximumRed:hover {
   --tw-text-opacity: 1;
   color: rgb(214 40 40 / var(--tw-text-opacity));
+}
+
+.hover\:text-lemonMeringue:hover {
+  --tw-text-opacity: 1;
+  color: rgb(234 226 183 / var(--tw-text-opacity));
 }
