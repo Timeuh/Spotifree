@@ -1,9 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: 'jit',
+  purge: [
+    'index.php',
+    './src/**/*.{php, html}'
+  ],
   content: [
-      'index.php',
-      './src/**/*.php'
-      ],
+    'index.php',
+    './src/**/*.{php, html}'
+  ],
   theme: {
     extend: {
       colors: {
