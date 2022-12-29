@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .button-default {
+        @apply rounded-md bg-gradient-to-br from-maximumRed via-maximumYellowRed to-lemonMeringue m-4 p-0.5 w-2/5
+    }
+
+    .button-content {
+        @apply bg-prussianBlue rounded-md bg-opacity-40 text-2xl block hover:bg-transparent hover:text-prussianBlue transition
+    }
+
+    .background-plate {
+        @apply bg-prussianBlue bg-opacity-20 backdrop-blur-lg drop-shadow-lg border-prussianBlue border-double font-bold
+    }
+}
