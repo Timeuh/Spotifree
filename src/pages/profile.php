@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 <head>
     <title>Spotifree</title>
     <meta charset="UTF-8">
-    <link rel="icon" href="../../iconPalette.png">
+    <link rel="icon" href="../../icon.png">
     <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body class="flex flex-col items-center h-screen w-screen bg-gradient-to-br from-maximumRed via-maximumYellowRed to-lemonMeringue justify-center">
