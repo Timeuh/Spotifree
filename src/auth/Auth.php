@@ -80,7 +80,7 @@ class Auth {
                 else {
                     $user = new User($role, $email);
                     $_SESSION['user'] = serialize($user);
-                    header("Location: ../pages/home.php");
+                    header("Location: ../pages/home.html");
                 }
             }
         }
