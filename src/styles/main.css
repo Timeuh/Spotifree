@@ -707,6 +707,11 @@ video {
   border-right-width: 2px;
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
@@ -770,4 +775,14 @@ video {
 .text-green-600 {
   --tw-text-opacity: 1;
   color: rgb(22 163 74 / var(--tw-text-opacity));
+}
+
+.background {
+  background-color: rgb(249, 115, 22);
+  background-image: radial-gradient(at 26% 100%, rgb(99, 102, 241) 0, transparent 53%),
+  radial-gradient(at 37% 44%, rgb(19, 78, 74) 0, transparent 88%),
+  radial-gradient(at 54% 82%, rgb(136, 19, 55) 0, transparent 67%),
+  radial-gradient(at 48% 25%, rgb(167, 139, 250) 0, transparent 73%),
+  radial-gradient(at 1% 11%, rgb(64, 64, 64) 0, transparent 75%),
+  radial-gradient(at 13% 83%, rgb(212, 212, 216) 0, transparent 60%);
 }

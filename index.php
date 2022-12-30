@@ -6,7 +6,7 @@
     <link rel="icon" href="icon.png">
     <link rel="stylesheet" href="src/styles/main.css">
 </head>
-<body>
+<body class="w-screen h-screen background">
 <header>
     <img src="icon.png" alt="icone du site">
     <h1>Bienvenue sur Spotifree</h1>
