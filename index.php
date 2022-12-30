@@ -6,36 +6,32 @@
     <link rel="icon" href="icon.png">
     <link rel="stylesheet" href="src/styles/main.css">
 </head>
-<body class="w-screen h-screen background">
-<header>
+<body class="flex w-screen h-screen background text-center text-burnt-sienna-200">
+<header class="flex flex-lig justify-center items-center background-plate w-1/3 px-12 space-x-8">
     <img src="icon.png" alt="icone du site">
-    <h1>Bienvenue sur Spotifree</h1>
+    <h1 class="font-bold text-6xl drop-shadow-lg gradient-text">Bienvenue sur Spotifree</h1>
 </header>
-<main>
-    <div>
+<main class="w-4/6 background-plate text-3xl">
+    <div class="flex flex-col h-4/6 justify-center my-40 space-y-12 text-center">
         <?php
             session_start();
             if($_SERVER['REQUEST_METHOD'] == "GET"){
                 if (isset($_GET['state'])){
-                    if ($_GET['state'] == "disconnect") : ?><h1>Déconnexion réussie</h1>
+                    if ($_GET['state'] == "disconnect") : ?><h1 class="text-green-500 text-2xl">Déconnexion réussie</h1>
                         <?php
                         session_destroy();
                     endif;
                     }
                 } ?>
         <h2>Pas encore de compte ?</h2>
-        <a href="src/pages/register.php">
-            <span>S'inscrire</span>
-        </a>
+        <a href="src/pages/register.php" class="link mx-auto">S'inscrire</a>
         <h2>Déjà un compte ?</h2>
-        <a href="src/pages/login.php">
-            <span>Se connecter</span>
-        </a>
+        <a href="src/pages/login.php" class="link mx-auto">Se connecter</a>
     </div>
 </main>
-<footer>
-    <h3>Site créé par</h3>
-    <a href="https://github.com/Timeuh">Timeuh</a>
+<footer class="fixed bottom-0 flex flex-lig w-screen justify-center text-3xl py-4">
+    <h3 class="px-2">Site créé par</h3>
+    <a href="https://github.com/Timeuh" class="link">Timeuh</a>
 </footer>
 </body>
 </html>
