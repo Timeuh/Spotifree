@@ -24,4 +24,17 @@
     .link {
         @apply hover:gradient-text text-burnt-sienna-main font-bold transition
     }
+
+    .form-style {
+        @apply flex flex-col items-center space-y-8 text-3xl border-4 border-lavender-main rounded-md bg-lavender-400 bg-opacity-20
+    }
+
+    .form-input {
+        @apply bg-transparent required:border-red-500 required:border-2 required:rounded-md text-xl w-96
+        placeholder:text-center placeholder:text-thatch-500 text-thatch-500 text-center focus:outline-none
+    }
+
+    .site-error {
+        @apply text-3xl text-red-500 font-bold
+    }
 }
