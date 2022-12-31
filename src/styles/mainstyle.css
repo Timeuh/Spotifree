@@ -37,4 +37,9 @@
     .site-error {
         @apply text-3xl text-red-500 font-bold text-center
     }
+
+    .card {
+        @apply border-2 rounded-md p-14 w-1/2 h-4/6 justify-self-center m-12 text-6xl text-center
+        bg-lavender-400 border-lavender-main bg-opacity-20
+    }
 }
