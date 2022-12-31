@@ -23,9 +23,9 @@
                     endif;
                     }
                 } ?>
-        <h2>Pas encore de compte ?</h2>
+        <h2 class="text-4xl">Pas encore de compte ?</h2>
         <a href="src/pages/register.php" class="link mx-auto">S'inscrire</a>
-        <h2>Déjà un compte ?</h2>
+        <h2 class="text-4xl">Déjà un compte ?</h2>
         <a href="src/pages/login.php" class="link mx-auto">Se connecter</a>
     </div>
 </main>
