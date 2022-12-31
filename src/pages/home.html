@@ -6,19 +6,28 @@
     <link rel="icon" href="../../icon.png">
     <link rel="stylesheet" href="../styles/main.css">
 </head>
-<body>
-<header>
-    <a href="home.html">Explorer</a>
-    <a href="home.html">Mes playlists</a>
-    <a href="profile.php">Mon profil</a>
-    <a href="../../index.php?state=disconnect">Déconnexion</a>
-</header>
-<main>
-    <h1>Catalogue</h1>
+<body class="w-screen h-screen background text-center text-burnt-sienna-200 flex flex-col">
+<main class="grid grid-cols-2 gap-4 justify-self-center h-4/6">
+    <a class="card link flex flex-col justify-center items-center" href="home.html">
+        <img alt="icone du site" class="object-none h-40 w-40" src="../img/browse.png">
+        Explorer
+    </a>
+    <a class="card link flex flex-col justify-center items-center" href="home.html">
+        <img alt="icone du site" class="object-none h-40 w-40" src="../img/playlist.png">
+        Mes playlists
+    </a>
+    <a class="card link flex flex-col justify-center items-center" href="profile.php">
+        <img alt="icone du site" class="object-none h-40 w-40" src="../img/profile.png">
+        Mon profil
+    </a>
+    <a class="card link flex flex-col justify-center items-center" href="../../index.php?state=disconnect">
+        <img alt="icone du site" class="object-none h-40 w-40" src="../img/disconnect.png">
+        Déconnexion
+    </a>
 </main>
-<footer>
-    <h3>Site créé par</h3>
-    <a href="https://github.com/Timeuh">Timeuh</a>
+<footer class="fixed bottom-0 flex flex-lig w-screen justify-center text-3xl py-4">
+    <h3 class="px-2">Site créé par</h3>
+    <a class="link" href="https://github.com/Timeuh">Timeuh</a>
 </footer>
 </body>
 </html>
