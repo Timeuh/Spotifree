@@ -662,6 +662,7 @@ video {
 }
 
 .site-error {
+    text-align: center;
     font-size: 1.875rem;
     line-height: 2.25rem;
     font-weight: 700;
@@ -765,7 +766,7 @@ video {
 }
 
 .py-4 {
-  padding-top: 1rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
@@ -796,11 +797,6 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .text-4xl {

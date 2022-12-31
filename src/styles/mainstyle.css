@@ -35,6 +35,6 @@
     }
 
     .site-error {
-        @apply text-3xl text-red-500 font-bold
+        @apply text-3xl text-red-500 font-bold text-center
     }
 }
