@@ -3,7 +3,7 @@ module.exports = {
   mode: 'jit',
   content: [
     'index.php',
-    './src/**/*.{php, html}'
+    './src/**/*.{php,html}'
   ],
   theme: {
     extend: {
