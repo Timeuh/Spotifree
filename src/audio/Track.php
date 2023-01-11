@@ -36,4 +36,12 @@ class Track {
     public function getDuration(): int {
         return $this->duration;
     }
+
+    public function getArtist(): string {
+        return $this->artist;
+    }
+
+    public function getTitle(): string {
+        return $this->title;
+    }
 }
