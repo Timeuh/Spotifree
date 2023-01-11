@@ -44,4 +44,8 @@ class Track {
     public function getTitle(): string {
         return $this->title;
     }
+
+    public function getFilename(): string {
+        return $this->filename;
+    }
 }
