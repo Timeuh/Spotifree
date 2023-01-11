@@ -16,7 +16,7 @@ class Track {
         $this->filename = $filename;
     }
 
-    public function findById(int $id): ?Track {
+    public static function findById(int $id): ?Track {
         $db = DBConnect::makeConnection();
         if ($db == null) return null;
 
@@ -31,5 +31,9 @@ class Track {
         $filename = $data['filename'];
 
         return new Track($id, $duration, $title, $artist, $filename);
+    }
+
+    public function getDuration(): int {
+        return $this->duration;
     }
 }
