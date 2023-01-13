@@ -12,7 +12,7 @@ class PlaylistRenderer {
         $size = $playlist->getSize();
         $tracks = $playlist->getTracks();
 
-        $minutes = $duration / 60;
+        $minutes = floor($duration / 60);
         $seconds = $duration % 60;
 
         $trackRenderer = new TrackRenderer();

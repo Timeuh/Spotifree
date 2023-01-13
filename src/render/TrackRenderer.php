@@ -13,7 +13,7 @@ class TrackRenderer {
         $filename = $track->getFilename();
 
         $seconds = $duration % 60;
-        $minutes = $duration / 60;
+        $minutes = floor($duration / 60);
 
         return "<div>
                 <h1>$title</h1> Par <b>$artist</b>, Durée : $minutes:$seconds
