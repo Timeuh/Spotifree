@@ -15,8 +15,10 @@ class TrackRenderer {
         $seconds = $duration % 60;
         $minutes = $duration / 60;
 
-        return "<h1>$title</h1> par <b>$artist</b> durée : $minutes:$seconds
-                <audio src=''></audio> 
-        ";
+        return "<div>
+                <h1>$title</h1> Par <b>$artist</b>, Durée : $minutes:$seconds
+                <audio src='../music/$filename.mp3' controls></audio> 
+                </div>
+                ";
     }
 }
