@@ -27,11 +27,12 @@ $playlistRenderer = new PlaylistRenderer();
     <link rel="icon" href="../../icon.png">
     <link rel="stylesheet" href="../styles/main.css">
 </head>
-<body>
+<body class="w-full h-full background text-center text-burnt-sienna-200 flex flex-col">
 <main>
     <?php print $playlistRenderer->render($catalogue); ?>
+    <a class="link text-3xl" href="home.html">Accueil</a>
 </main>
-<footer class="fixed bottom-0 flex flex-lig w-screen justify-center text-3xl py-4">
+<footer class="bottom-0 flex flex-lig w-full justify-center text-3xl py-4">
     <h3 class="px-2">Site créé par</h3>
     <a class="link" href="https://github.com/Timeuh">Timeuh</a>
 </footer>
