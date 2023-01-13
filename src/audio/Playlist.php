@@ -83,4 +83,20 @@ class Playlist {
         $this->size++;
         $this->duration += $track->getDuration();
     }
+
+    public function getTitle(): string {
+        return $this->title;
+    }
+
+    public function getDuration(): int {
+        return $this->duration;
+    }
+
+    public function getSize(): int {
+        return $this->size;
+    }
+
+    public function getTracks(): array {
+        return $this->tracks;
+    }
 }
