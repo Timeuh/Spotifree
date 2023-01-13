@@ -17,4 +17,23 @@ for ($i = 1; $i < 11; $i++) {
 }
 
 $playlistRenderer = new PlaylistRenderer();
-print $playlistRenderer->render($catalogue);
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Spotifree</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../../icon.png">
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+<main>
+    <?php print $playlistRenderer->render($catalogue); ?>
+</main>
+<footer class="fixed bottom-0 flex flex-lig w-screen justify-center text-3xl py-4">
+    <h3 class="px-2">Site créé par</h3>
+    <a class="link" href="https://github.com/Timeuh">Timeuh</a>
+</footer>
+</body>
+</html>
