@@ -15,8 +15,8 @@ class TrackRenderer {
         $seconds = $duration % 60;
         $minutes = floor($duration / 60);
 
-        return "<div class='flex flex-col justify-center items-center py-12'>
-                <h1 class='text-2xl text-burnt-sienna-300'>$title</h1>
+        return "<div class='flex flex-col justify-center items-center py-12 text-xl'>
+                <h1 class='text-3xl text-burnt-sienna-300'>$title</h1>
                 <p>Par <b class='text-lavender-300'>$artist</b>, Durée <b class='text-lavender-300'>$minutes:$seconds</b></p> 
                 <audio src='../music/$filename.mp3' controls></audio> 
                 </div>
