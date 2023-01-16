@@ -41,4 +41,12 @@ class User {
             $update->execute();
         }
     }
+
+    public function getEmail(): string {
+        return $this->email;
+    }
+
+    public function getRole(): int {
+        return $this->role;
+    }
 }
