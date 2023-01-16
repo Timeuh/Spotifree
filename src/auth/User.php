@@ -42,6 +42,25 @@ class User {
         }
     }
 
+    public function findPlaylists(): ?array {
+        $res = [];
+        $db = DBConnect::makeConnection();
+        if ($db == null) return $res;
+
+        $querry = $db->prepare("select id_playlist from user2playlist where id_user = :user");
+        $querry->bindParam(':user', $this->email);
+        $querry->execute();
+
+        while ($data = $querry->fetch()) {
+            $playlistId = $data['id_playlist'];
+            $search = $db->prepare("select title from playlist where id = :id");
+            $search->bindParam(':id', $playlistId);
+            $search->execute();
+        }
+
+        return $res;
+    }
+
     public function getEmail(): string {
         return $this->email;
     }
