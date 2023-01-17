@@ -56,6 +56,12 @@ class User {
             $search = $db->prepare("select title from playlist where id = :id");
             $search->bindParam(':id', $playlistId);
             $search->execute();
+
+            while ($result = $search->fetch()) {
+                $title = $result['title'];
+                $playlist = [$playlistId, $title];
+                $res = $playlist;
+            }
         }
 
         return $res;
