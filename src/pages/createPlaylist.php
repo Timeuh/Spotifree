@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $playlist = new Playlist($title);
 
     $insertionStatus = $playlist->insert();
-    header("Location: userPlaylist.php?insertion=$insertionStatus");
+    header("Location: userPlaylists.php?insertion=$insertionStatus");
     exit();
 }
 ?>
