@@ -9,9 +9,9 @@ class Playlist {
     private string $title;
     private array $tracks;
 
-    public function __construct(int $size, int $duration, string $title) {
-        $this->size = $size;
-        $this->duration = $duration;
+    public function __construct(string $title) {
+        $this->size = 0;
+        $this->duration = 0;
         $this->title = $title;
         $this->tracks = [];
     }
