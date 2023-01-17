@@ -22,6 +22,12 @@ $playlists = $user->findPlaylists();
 <main>
     <a href="home.html">Accueil</a>
     <?php
+    if (isset($_GET['insertion'])) {
+        $state = $_GET['insertion'];
+        if ($state == 1) print ("<h1>Playlist créée</h1>");
+        else print ("<h1>Échec de création, veuillez réessayer</h1>");
+    }
+
     if ($playlists == []) {
         print ("<h1>Vous n'avez pas de playlist, créez-en une !</h1>");
     } else {

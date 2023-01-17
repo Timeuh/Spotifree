@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <button type="submit">Créer</button>
     </form>
     <a href="home.html">Accueil</a>
-    <a href="userPLaylists.php">Retour</a>
+    <a href="userPlaylists.php">Retour</a>
 </main>
 <footer class="fixed bottom-0 flex flex-lig w-screen justify-center text-3xl py-4">
     <h3 class="px-2">Site créé par</h3>
