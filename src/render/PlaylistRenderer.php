@@ -8,6 +8,7 @@ class PlaylistRenderer {
 
     public function render(Playlist $playlist): string {
         $title = $playlist->getTitle();
+        if ($title == "0") $title = "Catalogue";
         $duration = $playlist->getDuration();
         $size = $playlist->getSize();
         $tracks = $playlist->getTracks();
