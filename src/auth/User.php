@@ -60,7 +60,7 @@ class User {
             while ($result = $search->fetch()) {
                 $title = $result['title'];
                 $playlist = [$playlistId, $title];
-                $res = $playlist;
+                $res[] = $playlist;
             }
         }
 
