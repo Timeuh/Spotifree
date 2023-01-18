@@ -32,12 +32,11 @@ $playlists = $user->findPlaylists();
         print ("<h1>Vous n'avez pas de playlist, créez-en une !</h1>");
     } else {
         foreach ($playlists as $key => $value) {
-            foreach ($value as $container => $playlist) {
-                $id = $playlist[0];
-                $title = $playlist[1];
+            $id = $value[0];
+            $title = $value[1];
 
-                print ("<a href='displayPlaylist.php?id=" . $id . "'>" . $title . "</a>");
-            }
+            print ("<a href='displayPlaylist.php?id=" . $id . "'>" . $title . "</a>");
+
         }
     }
     print("<a href='createPlaylist.php'>Créer une playlist</a>");
