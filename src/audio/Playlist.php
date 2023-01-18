@@ -16,6 +16,13 @@ class Playlist {
         $this->tracks = [];
     }
 
+    public static function restore($size, $duration, $title): Playlist {
+        $res = new Playlist($title);
+        $res->setDuration($duration);
+        $res->setSize($size);
+        return $res;
+    }
+
     public function insert(): bool {
         $user = unserialize($_SESSION['user']);
         $email = $user->getEmail();
@@ -73,7 +80,7 @@ class Playlist {
         $db = DBConnect::makeConnection();
         if ($db == null) return null;
 
-        $query = $db->query("select * from playlist where id_playlist = :id");
+        $query = $db->prepare("select * from playlist where id_playlist = :id");
         $query->bindParam(':id', $id);
         $query->execute();
 
@@ -82,7 +89,7 @@ class Playlist {
         $duration = $data['duration'];
         $title = $data['title'];
 
-        $res = new Playlist($size, $duration, $title);
+        $res = Playlist::restore($size, $duration, $title);
         $res->setId($id);
         return $res;
     }
@@ -111,5 +118,13 @@ class Playlist {
 
     public function getTracks(): array {
         return $this->tracks;
+    }
+
+    public function setDuration(int $duration): void {
+        $this->duration = $duration;
+    }
+
+    public function setSize(int $size): void {
+        $this->size = $size;
     }
 }
