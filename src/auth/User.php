@@ -53,7 +53,7 @@ class User {
 
         while ($data = $querry->fetch()) {
             $playlistId = $data['id_playlist'];
-            $search = $db->prepare("select title from playlist where id = :id");
+            $search = $db->prepare("select title from playlist where id_playlist = :id");
             $search->bindParam(':id', $playlistId);
             $search->execute();
 
