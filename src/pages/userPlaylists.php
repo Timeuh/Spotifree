@@ -18,28 +18,31 @@ $playlists = $user->findPlaylists();
     <link rel="icon" href="../../icon.png">
     <link rel="stylesheet" href="../styles/main.css">
 </head>
-<body class="h-screen w-screen background">
-<main>
-    <a href="home.html">Accueil</a>
+<body class="h-screen w-screen background text-center text-burnt-sienna-200 flex items-center justify-center">
+<main class="background-plate h-1/2 w-1/2 flex flex-col justify-center items-center">
+    <a class="link text-3xl" href="home.html">Accueil</a>
     <?php
     if (isset($_GET['insertion'])) {
         $state = $_GET['insertion'];
         if ($state == 1) print ("<h1>Playlist créée</h1>");
         else print ("<h1>Échec de création, veuillez réessayer</h1>");
-    }
+    } ?>
+    <div class="py-20">
+        <?php
+        if ($playlists == []) {
+            print ("<h1>Vous n'avez pas de playlist, créez-en une !</h1>");
+        } else {
+            foreach ($playlists as $key => $value) {
+                $id = $value[0];
+                $title = $value[1];
 
-    if ($playlists == []) {
-        print ("<h1>Vous n'avez pas de playlist, créez-en une !</h1>");
-    } else {
-        foreach ($playlists as $key => $value) {
-            $id = $value[0];
-            $title = $value[1];
-
-            print ("<a href='displayPlaylist.php?id=" . $id . "'>" . $title . "</a>");
-
-        }
-    }
-    print("<a href='createPlaylist.php'>Créer une playlist</a>");
+                print ("<a class='flex text-burnt-sienna-500 hover:text-lavender-400 w-fit transition py-2' 
+                    href='displayPlaylist.php?id=" . $id . "'>" . $title . "</a>");
+            }
+        } ?>
+    </div>
+    <?php
+    print("<a class='link text-2xl' href='createPlaylist.php'>Créer une playlist</a>");
     ?>
 </main>
 <footer class="fixed bottom-0 flex flex-lig w-full justify-center text-3xl py-4">
