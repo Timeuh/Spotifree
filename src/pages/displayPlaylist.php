@@ -24,11 +24,14 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body class="w-screen h-screen background text-center text-burnt-sienna-200 flex flex-col">
-<main>
+<main class="py-12">
     <a class="link text-3xl" href="userPlaylists.php">Retour</a>
-    <?php
-    print ($renderer->render($playlist));
-    ?>
+    <div class="py-12">
+        <?php
+        print ($renderer->render($playlist));
+        ?>
+    </div>
+    <a class="link text-2xl" href="catalogue.php">Ajouter une musique</a>
 </main>
 <footer class="fixed bottom-0 flex flex-lig w-screen justify-center text-3xl py-4">
     <h3 class="px-2">Site créé par</h3>
