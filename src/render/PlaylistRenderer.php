@@ -19,7 +19,7 @@ class PlaylistRenderer {
         $trackRenderer = new TrackRenderer();
 
         $result = "<div class='text-3xl'>
-                    <h1 class='text-slate-800'>$title</h1> Durée <b class='text-lavender-300'>$minutes:$seconds</b>, 
+                    <h1 class='text-slate-800 font-bold'>$title</h1> Durée <b class='text-lavender-300'>$minutes:$seconds</b>, 
                     <b class='text-lavender-300'>$size</b> pistes
                    ";
 
