@@ -17,6 +17,9 @@ class Playlist {
     }
 
     public function insert(): bool {
+        $user = unserialize($_SESSION['user']);
+        $email = $user->getEmail();
+
         $db = DBConnect::makeConnection();
         if ($db == null) return false;
 
@@ -24,7 +27,17 @@ class Playlist {
         $insert->bindParam(':size', $this->size);
         $insert->bindParam(':duration', $this->duration);
         $insert->bindParam(':title', $this->title);
-        return $insert->execute();
+        $playlistInsertion = $insert->execute();
+
+        $select = $db->query("select LAST_INSERT_ID()");
+        $playlistId = $select->fetchColumn();
+
+        $add = $db->prepare("insert into user2playlist(id_playlist, id_user) values(:playlist, :user)");
+        $add->bindParam(':playlist', $playlistId);
+        $add->bindParam(':user', $email);
+        $u2pInsertion = $add->execute();
+
+        return $playlistInsertion && $u2pInsertion;
     }
 
     public function update(): bool {
