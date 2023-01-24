@@ -27,17 +27,17 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <link rel="icon" href="../../icon.png">
     <link rel="stylesheet" href="../styles/main.css">
 </head>
-<body class="w-screen h-screen background text-center text-burnt-sienna-200 flex flex-col">
-<main>
-    <h1>Créez votre playlist</h1>
-    <form method="post" action="createPlaylist.php">
+<body class="w-screen h-screen background text-center text-burnt-sienna-200 flex flex-col justify-center items-center">
+<main class="background-plate h-1/2 w-1/2 flex flex-col justify-center items-center">
+    <h1 class="text-4xl py-12">Créez votre playlist</h1>
+    <form method="post" action="createPlaylist.php" class="form-style">
         <label> Titre
-            <input type="text" name="title" required>
+            <input type="text" name="title" required class="form-input">
         </label>
-        <button type="submit">Créer</button>
+        <button type="submit" class="link">Créer</button>
     </form>
-    <a href="home.html">Accueil</a>
-    <a href="userPlaylists.php">Retour</a>
+    <a href="home.html" class="link text-2xl py-4">Accueil</a>
+    <a href="userPlaylists.php" class="link text-2xl py-4">Retour</a>
 </main>
 <footer class="fixed bottom-0 flex flex-lig w-screen justify-center text-3xl py-4">
     <h3 class="px-2">Site créé par</h3>
