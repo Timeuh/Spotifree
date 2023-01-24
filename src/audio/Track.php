@@ -48,4 +48,8 @@ class Track {
     public function getFilename(): string {
         return $this->filename;
     }
+
+    public function getId(): int {
+        return $this->id;
+    }
 }
