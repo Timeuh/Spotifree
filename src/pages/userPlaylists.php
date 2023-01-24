@@ -36,7 +36,7 @@ $playlists = $user->findPlaylists();
                 $id = $value[0];
                 $title = $value[1];
 
-                print ("<a class='flex text-burnt-sienna-500 hover:text-lavender-400 w-fit transition py-2' 
+                print ("<a class='flex text-burnt-sienna-500 hover:text-lavender-400 w-fit transition py-2 text-xl' 
                     href='displayPlaylist.php?id=" . $id . "'>" . $title . "</a>");
             }
         } ?>
