@@ -66,3 +66,15 @@ alter table playlist2track
     add constraint p2t_playlist foreign key (id_playlist) references playlist (id_playlist);
 alter table playlist2track
     add constraint p2t_track foreign key (id_track) references track (id);
+
+-- Tracks insertion
+insert into track(title, artist, filename, duration) values("A Small Miracle", "Free Artist","a-small-miracle-132333", 76);
+insert into track(title, artist, filename, duration) values("Abstract Fashion Pop", "Free Artist","abstract-fashion-pop-131283", 92);
+insert into track(title, artist, filename, duration) values("Cinim Brainfluid", "Free Artist","cinim-brainfluid-122844", 177);
+insert into track(title, artist, filename, duration) values("Drop It", "Free Artist","drop-it-124014", 102);
+insert into track(title, artist, filename, duration) values("Lifelike", "Free Artist","lifelike-126735", 144);
+insert into track(title, artist, filename, duration) values("Mountain Path", "Free Artist","mountain-path-125573", 208);
+insert into track(title, artist, filename, duration) values("Password Infinity", "Free Artist","password-infinity-123276", 165);
+insert into track(title, artist, filename, duration) values("Please Calm My Mind", "Free Artist","please-calm-my-mind-125566", 175);
+insert into track(title, artist, filename, duration) values("Relaxed Vlog", "Free Artist","relaxed-vlog-131746", 140);
+insert into track(title, artist, filename, duration) values("The Beat Of Nature", "Free Artist","the-beat-of-nature-122841", 173);
