@@ -24,8 +24,8 @@ $playlists = $user->findPlaylists();
     <?php
     if (isset($_GET['insertion'])) {
         $state = $_GET['insertion'];
-        if ($state == 1) print ("<h1>Playlist créée</h1>");
-        else print ("<h1>Échec de création, veuillez réessayer</h1>");
+        if ($state == 1) print ("<h1 class='text-green-500 text-2xl'>Playlist créée</h1>");
+        else print ("<h1 class='site-error'>Échec de création, veuillez réessayer</h1>");
     } ?>
     <div class="py-20">
         <?php
