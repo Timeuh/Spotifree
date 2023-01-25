@@ -24,9 +24,9 @@
                     }
                 } ?>
         <h2 class="text-4xl">Pas encore de compte ?</h2>
-        <a href="src/pages/register.php" class="link mx-auto">S'inscrire</a>
+        <a href="pages/register.php" class="link mx-auto">S'inscrire</a>
         <h2 class="text-4xl">Déjà un compte ?</h2>
-        <a href="src/pages/login.php" class="link mx-auto">Se connecter</a>
+        <a href="pages/login.php" class="link mx-auto">Se connecter</a>
     </div>
 </main>
 <footer class="fixed bottom-0 flex flex-lig w-screen justify-center text-3xl py-4">
