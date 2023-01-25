@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .background {
+        background-color: rgb(249, 115, 22);
+        background-image: radial-gradient(at 26% 100%, rgb(99, 102, 241) 0, transparent 53%),
+        radial-gradient(at 37% 44%, rgb(19, 78, 74) 0, transparent 88%),
+        radial-gradient(at 54% 82%, rgb(136, 19, 55) 0, transparent 67%),
+        radial-gradient(at 48% 25%, rgb(167, 139, 250) 0, transparent 73%),
+        radial-gradient(at 1% 11%, rgb(64, 64, 64) 0, transparent 75%),
+        radial-gradient(at 13% 83%, rgb(212, 212, 216) 0, transparent 60%);
+    }
+
+    .background-plate {
+        @apply bg-thatch-900 bg-opacity-20 backdrop-blur-lg drop-shadow-lg
+    }
+
+    .gradient-text {
+        @apply text-transparent bg-clip-text bg-gradient-to-r from-lavender-main via-thatch-main to-burnt-sienna-main
+    }
+
+    .link {
+        @apply hover:gradient-text text-burnt-sienna-main font-bold transition
+    }
+
+    .form-style {
+        @apply flex flex-col items-center space-y-8 text-3xl border-4 border-lavender-main rounded-md bg-lavender-400 bg-opacity-20
+    }
+
+    .form-input {
+        @apply bg-transparent required:border-red-500 required:border-2 required:rounded-md text-xl w-96
+        placeholder:text-center placeholder:text-thatch-500 text-thatch-500 text-center focus:outline-none
+    }
+
+    .site-error {
+        @apply text-3xl text-red-500 font-bold text-center
+    }
+
+    .card {
+        @apply border-2 rounded-md p-14 w-1/2 h-4/6 justify-self-center m-12 text-6xl text-center
+        bg-lavender-400 border-lavender-main bg-opacity-20
+    }
+}

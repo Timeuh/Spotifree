@@ -4,7 +4,7 @@
     <title>Spotifree</title>
     <meta charset="UTF-8">
     <link rel="icon" href="icon.png">
-    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="www/styles/main.css">
 </head>
 <body class="flex w-screen h-screen background text-center text-burnt-sienna-200">
 <header class="flex flex-lig justify-center items-center background-plate w-1/3 px-12 space-x-8">
