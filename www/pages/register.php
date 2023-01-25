@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
             <button type="submit" class="link text-4xl py-8">Confirmer</button>
         </form>
     </div>
-    <a href="../../index.php" class="link text-4xl">Accueil</a>
+    <a href="../index.php" class="link text-4xl">Accueil</a>
 </main>
 <footer class="fixed bottom-0 flex flex-lig w-screen justify-center text-3xl py-4">
     <h3 class="px-2">Site créé par</h3>
