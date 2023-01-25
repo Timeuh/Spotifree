@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
 <head>
     <title>Spotifree</title>
     <meta charset="UTF-8">
-    <link rel="icon" href="../../icon.png">
+    <link rel="icon" href="../img/icon.png">
     <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body class="w-screen h-screen background text-center text-burnt-sienna-200 flex flex-col">

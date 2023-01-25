@@ -3,12 +3,12 @@
 <head>
     <title>Spotifree</title>
     <meta charset="UTF-8">
-    <link rel="icon" href="../icon.png">
+    <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body class="flex w-screen h-screen background text-center text-burnt-sienna-200">
 <header class="flex flex-lig justify-center items-center background-plate w-1/3 px-12 space-x-8">
-    <img src="../icon.png" alt="icone du site">
+    <img src="img/icon.png" alt="icone du site">
     <h1 class="font-bold text-6xl drop-shadow-lg gradient-text">Bienvenue sur Spotifree</h1>
 </header>
 <main class="w-4/6 background-plate text-3xl">

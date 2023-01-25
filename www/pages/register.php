@@ -2,6 +2,7 @@
 namespace timeuh\spotifree\pages;
 
 require_once "../../vendor/autoload.php";
+
 use timeuh\spotifree\auth\Auth;
 use timeuh\spotifree\database\DBConnect;
 
@@ -21,12 +22,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
 <head>
     <title>Spotifree</title>
     <meta charset="UTF-8">
-    <link rel="icon" href="../../icon.png">
+    <link rel="icon" href="../img/icon.png">
     <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body class="background h-screen w-screen flex text-burnt-sienna-200 text-center">
 <header class="flex flex-lig justify-center items-center background-plate w-1/3 px-12 space-x-8">
-    <img src="../../icon.png" alt="icone du site">
+    <img src="../img/icon.png" alt="icone du site">
     <h1 class="font-bold text-6xl drop-shadow-lg gradient-text">Inscription</h1>
 </header>
 <main class="flex flex-col background-plate w-full h-full justify-center">
