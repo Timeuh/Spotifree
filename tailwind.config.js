@@ -2,8 +2,7 @@
 module.exports = {
   mode: 'jit',
   content: [
-    'index.php',
-    './src/**/*.{php,html}'
+    './www/**/*.{php,html}'
   ],
   theme: {
     extend: {
