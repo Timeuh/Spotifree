@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     <link rel="icon" href="../img/icon.png">
     <link rel="stylesheet" href="../styles/main.css">
 </head>
-<body class="w-screen h-screen background text-center text-burnt-sienna-200 flex flex-col">
+<body class="w-full h-full background text-center text-burnt-sienna-200 flex flex-col">
 <main class="py-12">
     <a class="link text-3xl" href="userPlaylists.php">Retour</a>
     <div class="py-12">
@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     </div>
     <a class="link text-2xl" href="catalogue.php">Ajouter une musique</a>
 </main>
-<footer class="fixed bottom-0 flex flex-lig w-screen justify-center text-3xl py-4">
+<footer class="bottom-0 flex flex-lig w-full justify-center text-3xl py-4">
     <h3 class="px-2">Site créé par</h3>
     <a class="link" href="https://github.com/Timeuh">Timeuh</a>
 </footer>
