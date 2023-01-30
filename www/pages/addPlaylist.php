@@ -17,19 +17,22 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
 
     $user = unserialize($_SESSION['user']);
     $playlists = $user->findPlaylists();
-} else {
-    $playlistId = $_POST['playlistChooser'];
-    $trackId = $_POST['track'];
+} else if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $playlistId = intval($_POST['playlistChooser']);
+    $trackId = intval($_POST['track']);
     $playlist = Playlist::findById($playlistId);
-    $duration = $playlist->getDuration();
+    $track = Track::findById($trackId);
+    $duration = $track->getDuration();
     $size = $playlist->getSize();
 
+    /*
     $db = DBConnect::makeConnection();
     $insert = $db->prepare("insert into playlist2track(id_playlist, id_track) values(:playlist, :track)");
     $insert->bindParam(':playlist', $playlistId);
     $insert->bindParam(':track', $trackId);
     $done = $insert->execute();
-
+    */
+    var_dump($playlist);
     Playlist::incrementSize($playlistId, $duration, $size);
 }
 
