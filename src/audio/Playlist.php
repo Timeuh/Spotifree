@@ -91,6 +91,7 @@ class Playlist {
 
         $res = Playlist::restore($size, $duration, $title);
         $res->setId($id);
+        $res->findTracks();
         return $res;
     }
 
