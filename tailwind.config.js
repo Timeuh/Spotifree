@@ -2,7 +2,9 @@
 module.exports = {
   mode: 'jit',
   content: [
-    './www/**/*.{php,html}'
+    './src/render/*.php',
+    './www/**/*.{php,html}',
+    './index.php'
   ],
   theme: {
     extend: {
