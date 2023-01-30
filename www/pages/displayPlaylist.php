@@ -28,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     <a class="link text-3xl" href="userPlaylists.php">Retour</a>
     <div class="py-12">
         <?php
+        if (isset($_GET['presence'])) print "<h1 class='site-error py-4'>Cette musique est déjà dans votre playlist</h1>";
         print ($renderer->render($playlist));
         ?>
     </div>
