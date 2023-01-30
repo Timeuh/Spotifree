@@ -94,6 +94,15 @@ class Playlist {
         return $res;
     }
 
+    public static function incrementSize(int $id, int $duration, int $size): void {
+        $db = DBConnect::makeConnection();
+        $update = $db->prepare("update playlist set size = :size, duration = :duration where id = :id");
+        $update->bindParam(':size', $size);
+        $update->bindParam(':duration', $duration);
+        $update->bindParam('id', $id);
+        $update->execute();
+    }
+
     public function setId(int $id): void {
         $this->id = $id;
     }
