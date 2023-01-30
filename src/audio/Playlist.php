@@ -107,6 +107,20 @@ class Playlist {
         $update->execute();
     }
 
+    public function checkIsPresent(int $trackId): bool {
+        $db = DBConnect::makeConnection();
+        $query = $db->prepare("select id_track from playlist2track where id_playlist = :id");
+        $query->bindParam(':id', $this->id);
+        $query->execute();
+
+        while ($data = $query->fetch()) {
+            $id = $data['id_track'];
+            if ($id == $trackId) return true;
+        }
+
+        return false;
+    }
+
     public function setId(int $id): void {
         $this->id = $id;
     }
