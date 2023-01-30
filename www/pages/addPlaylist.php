@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     $playlist = Playlist::findById($playlistId);
     $track = Track::findById($trackId);
     $duration = $track->getDuration();
+    $pDuration = $playlist->getDuration();
     $size = $playlist->getSize();
 
     $db = DBConnect::makeConnection();
@@ -30,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     $insert->bindParam(':playlist', $playlistId);
     $insert->bindParam(':track', $trackId);
     $done = $insert->execute();
-    Playlist::incrementSize($playlistId, $duration, $size);
+    Playlist::incrementSize($playlistId, $duration, $size, $pDuration);
 }
 
 ?>
