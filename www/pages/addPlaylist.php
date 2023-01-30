@@ -21,6 +21,9 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     $playlistId = intval($_POST['playlistChooser']);
     $trackId = intval($_GET['track']);
     $playlist = Playlist::findById($playlistId);
+    $presence = $playlist->checkIsPresent($trackId);
+
+    if ($presence) header("location: displayPlaylist.php?id=$playlistId&presence=true");
     $track = Track::findById($trackId);
     $duration = $track->getDuration();
     $pDuration = $playlist->getDuration();
