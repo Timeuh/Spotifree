@@ -801,8 +801,8 @@ video {
 }
 
 .object-none {
-  -o-object-fit: none;
-  object-fit: none;
+    -o-object-fit: none;
+    object-fit: none;
 }
 
 .py-12 {
