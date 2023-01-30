@@ -45,13 +45,13 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body class="w-screen h-screen background text-center text-burnt-sienna-200 flex flex-col justify-center items-center">
-<main class="background-plate h-1/2 w-1/2 flex flex-col justify-center items-center">
+<main class="background-plate h-1/2 w-1/2 flex flex-col justify-center items-center text-2xl">
     <?php if (isset($done)) {
-        if ($done) print "<h1>Musique ajoutée</h1>";
-        else print "<h1>Échec de l'ajout</h1>";
+        if ($done) print "<h1 class='text-3xl text-green-500 py-4'>Musique ajoutée</h1>";
+        else print "<h1 class='site-error py-4'>Échec de l'ajout</h1>";
     } ?>
     <?php print "<form method='post' action='addPlaylist.php?track=" . $trackId . "'"; ?>
-    <label>Ajouter <?php print "<span>$title</span>"; ?> : </label>
+    <label>Ajouter <?php print "<span class='text-lavender-main font-bold'>$title</span>"; ?> : </label>
     <select name="playlistChooser" required>
         <option value="">--Choisissez une playlist--</option>
         <?php
@@ -60,9 +60,10 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
         }
         ?>
     </select>
-    <button type="submit">Ajouter</button>
+    <button type="submit" class="link">Ajouter</button>
     </form>
-    <a href="catalogue.php" class="link text-2xl py-4">Retour</a>
+    <a href="userPlaylists.php" class="link text-2xl py-8">Mes Playlists</a>
+    <a href="catalogue.php" class="link text-2xl py-8">Retour</a>
 </main>
 <footer class="fixed bottom-0 flex flex-lig w-screen justify-center text-3xl py-4">
     <h3 class="px-2">Site créé par</h3>
