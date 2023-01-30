@@ -25,13 +25,11 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     $duration = $track->getDuration();
     $size = $playlist->getSize();
 
-    /*
     $db = DBConnect::makeConnection();
     $insert = $db->prepare("insert into playlist2track(id_playlist, id_track) values(:playlist, :track)");
     $insert->bindParam(':playlist', $playlistId);
     $insert->bindParam(':track', $trackId);
     $done = $insert->execute();
-    */
     Playlist::incrementSize($playlistId, $duration, $size);
 }
 
