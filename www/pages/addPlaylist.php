@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     $playlists = $user->findPlaylists();
 } else if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $playlistId = intval($_POST['playlistChooser']);
-    $trackId = intval($_POST['track']);
+    $trackId = intval($_GET['track']);
     $playlist = Playlist::findById($playlistId);
     $track = Track::findById($trackId);
     $duration = $track->getDuration();
@@ -32,7 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     $insert->bindParam(':track', $trackId);
     $done = $insert->execute();
     */
-    var_dump($playlist);
     Playlist::incrementSize($playlistId, $duration, $size);
 }
 
